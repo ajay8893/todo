@@ -19,5 +19,5 @@ def task_delete(request):
     return render
 
 
-def task_toggle_complete(request):
+def task_complete(request):
     return render
