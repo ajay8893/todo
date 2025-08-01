@@ -58,7 +58,7 @@ ROOT_URLCONF = 'todo_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [BASE_DIR / 'todo' / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,5 +123,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / "static",  # For project-level static files (optional)
+    BASE_DIR / "todo_project" / "static",  # For project-level static files (optional)
 ]
+
+# ✅ Authentication settings
+LOGIN_URL = '/login/'       # Where to redirect unauthenticated users
+LOGIN_REDIRECT_URL = '/'    # Optional: Where to go after successful login
+LOGOUT_REDIRECT_URL = '/login/'  # Optional: After logout
